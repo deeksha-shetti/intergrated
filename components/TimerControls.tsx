@@ -16,7 +16,7 @@ export default function TimerControls() {
   );
 
   useEffect(() => {
-    let timer;
+    let timer: NodeJS.Timeout | undefined;
 
     if (running && time > 0) {
       timer = setInterval(() => {
